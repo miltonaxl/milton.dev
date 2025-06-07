@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "projects": "Proyectos",
+    "stack": "Tecnologías",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Hola, soy Milton 👋",
+    "headline": "Construyo backends escalables, APIs y plataformas en la nube",
+    "description": "Desarrollador Full-Stack con más de 6 años de experiencia diseñando y escalando sistemas backend usando Python, Node.js y TypeScript. Ayudo a startups a construir sistemas seguros y escalables que entregan resultados reales de negocio.",
+    "cta_hire": "Contrátame",
+    "cta_projects": "Ver Proyectos",
+    "location": "Medellín, Colombia"
+  },
+  "why": {
+    "title": "Por Qué Trabajar Conmigo",
+    "subtitle": "Ayudo a startups a escalar infraestructura, optimizar rendimiento backend y automatizar despliegues — rápido y confiable.",
+    "points": [
+      "AWS Cloud y Arquitectura Serverless",
+      "PostgreSQL, MongoDB y optimización de rendimiento",
+      "DevOps: Docker, GitHub Actions, Terraform",
+      "APIs escalables, seguridad, CI/CD",
+      "Usado por usuarios reales en producción"
+    ]
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "subtitle": "Soluciones del mundo real construidas para producción",
+    "filter_all": "Todos",
+    "filter_fintech": "Fintech",
+    "filter_saas": "SaaS",
+    "filter_ai": "IA",
+    "filter_devops": "DevOps",
+    "view_details": "Ver Detalles"
+  },
+  "stack": {
+    "title": "Stack Tecnológico",
+    "subtitle": "Tecnologías que uso para construir soluciones escalables",
+    "backend": "Backend",
+    "databases": "Bases de Datos",
+    "cloud": "Cloud y DevOps",
+    "frontend": "Frontend",
+    "ai": "IA y ML"
+  },
+  "contact": {
+    "title": "Trabajemos Juntos",
+    "subtitle": "¿Listo para escalar tu backend? Hablemos de tu proyecto.",
+    "form": {
+      "name": "Tu Nombre",
+      "email": "Tu Email",
+      "message": "Cuéntame sobre tu proyecto",
+      "send": "Enviar Mensaje",
+      "sending": "Enviando..."
+    },
+    "success": "¡Mensaje enviado exitosamente! Te responderé pronto.",
+    "error": "Error al enviar mensaje. Por favor intenta por WhatsApp.",
+    "whatsapp": "Contactar por WhatsApp"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "built": "Construido con Next.js y TypeScript"
+  }
+}

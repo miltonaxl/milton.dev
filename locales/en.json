@@ -1,0 +1,64 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "stack": "Tech Stack",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm Milton 👋",
+    "headline": "I build scalable backends, APIs, and cloud-powered platforms",
+    "description": "Full-Stack Developer with 6+ years of experience designing and scaling backend-heavy systems using Python, Node.js, and TypeScript. I help startups build secure, scalable systems that deliver real business results.",
+    "cta_hire": "Hire Me",
+    "cta_projects": "View Projects",
+    "location": "Medellín, Colombia"
+  },
+  "why": {
+    "title": "Why Work With Me",
+    "subtitle": "I help startups scale infrastructure, optimize backend performance, and automate deployments — fast and reliably.",
+    "points": [
+      "AWS Cloud & Serverless Architecture",
+      "PostgreSQL, MongoDB & performance tuning",
+      "DevOps: Docker, GitHub Actions, Terraform",
+      "Scalable APIs, security, CI/CD",
+      "Used by real users in production"
+    ]
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "Real-world solutions built for production",
+    "filter_all": "All",
+    "filter_fintech": "Fintech",
+    "filter_saas": "SaaS",
+    "filter_ai": "AI",
+    "filter_devops": "DevOps",
+    "view_details": "View Details"
+  },
+  "stack": {
+    "title": "Tech Stack",
+    "subtitle": "Technologies I use to build scalable solutions",
+    "backend": "Backend",
+    "databases": "Databases",
+    "cloud": "Cloud & DevOps",
+    "frontend": "Frontend",
+    "ai": "AI & ML"
+  },
+  "contact": {
+    "title": "Let's Work Together",
+    "subtitle": "Ready to scale your backend? Let's discuss your project.",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "message": "Tell me about your project",
+      "send": "Send Message",
+      "sending": "Sending..."
+    },
+    "success": "Message sent successfully! I'll get back to you soon.",
+    "error": "Failed to send message. Please try WhatsApp instead.",
+    "whatsapp": "Contact via WhatsApp"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "built": "Built with Next.js & TypeScript"
+  }
+}
