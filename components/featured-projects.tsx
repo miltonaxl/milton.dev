@@ -6,68 +6,80 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ExternalLink, Github } from "lucide-react"
+import { ExternalLink, Github } from "lucide-react" // Ensure ExternalLink is imported
 
 const projects = [
   {
     id: 1,
-    title: "Monstro - Fintech Lambda Orchestration",
-    description: "Serverless fintech platform with NestJS, AWS Lambda, and PostgreSQL for payment processing",
-    image: "/placeholder.svg?height=300&width=500",
-    tags: ["NestJS", "AWS Lambda", "PostgreSQL", "Fintech"],
-    category: "fintech",
-    github: "#",
-    demo: "#",
+    title: "Pluriza - Estori.co E-commerce Platform",
+    description: "All-in-One eCommerce platform for Latin America, offering personalized shopping experiences. Migrated from monolithic to serverless architecture.",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBMpqFRu6HLihOM8Z-BnorzIr-gUI6qtWYzw&s?height=300&width=500", // You'll want to replace this with a relevant image
+    tags: ["NestJS", "AWS Lambda", "MongoDB", "Serverless", "CloudFormation", "S3", "API Gateway", "EventBridge", "SQS"],
+    category: "ecommerce",
+    github: "#", // Add actual GitHub link if available
+    demo: "https://www.estori.co/",
+    companyName: "Pluriza",
+    companyUrl: "https://www.pluriza.com/",
   },
   {
     id: 2,
-    title: "Tendeciapp - E-commerce Platform",
-    description: "Full-stack e-commerce solution with Flutter mobile app and AWS backend",
-    image: "/placeholder.svg?height=300&width=500",
-    tags: ["Flutter", "AWS", "Node.js", "MongoDB"],
-    category: "saas",
-    github: "#",
-    demo: "#",
+    title: "Leanware - Monstro.com Financial Data Aggregation",
+    description: "Platform to aggregate and normalize financial and real estate user data from various bank APIs (Plaid, Finicity) using an ETL-like process.",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToRP8XuAhkRQvxNKII-z12JqnXCVaNoJulag&s?height=300&width=500", // You'll want to replace this with a relevant image
+    tags: ["NestJS", "DynamoDB", "Serverless Framework", "AWS Lambda", "EventBridge", "CloudFormation", "API Gateway", "Grafana", "S3", "Step Functions", "SQS", "SNS"],
+    category: "fintech",
+    github: "#", // Add actual GitHub link if available
+    demo: "https://monstro.com/", // Assuming this is the correct URL
+    companyName: "Leanware",
+    companyUrl: "https://www.leanware.co/",
   },
   {
     id: 3,
-    title: "AI Assistant with LangChain",
-    description: "Intelligent assistant using Django, LangChain, OpenAI, and pgvector for embeddings",
-    image: "/placeholder.svg?height=300&width=500",
-    tags: ["Django", "LangChain", "OpenAI", "pgvector"],
-    category: "ai",
-    github: "#",
-    demo: "#",
+    title: "Leanware - Canadian Orthodontic Partners Web Portal",
+    description: "Full-stack web application for Canadian Orthodontic Partners, providing support services to independent practitioners to optimize patient care.",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS86Ih4bD1SJ0jsKFIyvJLKXBq2NjLqKYygAA&s?height=300&width=500", // You'll want to replace this with a relevant image
+    tags: ["Node.js", "Express.js", "React", "MySQL", "GCP", "Full-stack"],
+    category: "healthcare", // Or 'saas' depending on the business model
+    github: "#", // Add actual GitHub link if available
+    demo: "https://www.canadianorthodonticpartners.com/", // Assuming this is the correct URL
+    companyName: "Leanware",
+    companyUrl: "https://www.leanware.co/",
   },
   {
     id: 4,
-    title: "Task Manager with Roles",
-    description: "Enterprise task management system with advanced permissions and workflows",
-    image: "/placeholder.svg?height=300&width=500",
-    tags: ["React", "Node.js", "PostgreSQL", "Auth"],
+    title: "Leanware - Plannerd.com Wedding Planning Platform",
+    description: "Collaborative wedding planning platform for couples and their support teams, featuring robust backend and responsive frontend.",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEeiZNhvOiE2tvTlKMvJ-cOXeozYMtx0qVWA&s?height=300&width=500", // You'll want to replace this with a relevant image
+    tags: ["Django", "Python", "PostgreSQL", "React", "AWS Lambda", "Cognito", "EventBridge", "SNS"],
     category: "saas",
-    github: "#",
-    demo: "#",
+    github: "#", // Add actual GitHub link if available
+    demo: "https://www.plannerd.com/", // Assuming this is the correct URL
+    companyName: "Leanware",
+    companyUrl: "https://www.leanware.co/",
   },
   {
     id: 5,
-    title: "Stripe SaaS Billing",
-    description: "Complete SaaS billing solution with authentication, subscriptions, and webhooks",
-    image: "/placeholder.svg?height=300&width=500",
-    tags: ["Stripe", "Next.js", "Supabase", "Webhooks"],
-    category: "saas",
-    github: "#",
-    demo: "#",
+    title: "Blossom - Credit Union Banking Solution",
+    description: "All-in-one core and digital banking platform for credit unions, providing mission-critical systems and administrative tools.",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuWATWVqINt9ibM8-m6jgjLfUuL47GPhVptw&s?height=300&width=500", // You'll want to replace this with a relevant image
+    tags: ["Node.js", "Express.js", "Sequelize", "PostgreSQL", "AWS CloudWatch"],
+    category: "fintech", // Or 'saas'
+    github: "#", // Add actual GitHub link if available
+    demo: "https://www.blossom.net/",
+    companyName: "Blossom",
+    companyUrl: "https://www.blossom.net/",
   },
   {
     id: 6,
-    title: "DevOps CI/CD Pipeline",
-    description: "Automated deployment pipeline with Docker, GitHub Actions, and Terraform",
-    image: "/placeholder.svg?height=300&width=500",
-    tags: ["Docker", "GitHub Actions", "Terraform", "AWS"],
-    category: "devops",
-    github: "#",
-    demo: "#",
+    title: "Geeks5G - CPA Bookkeeping AI-Powered Transaction Processing",
+    description: "AI-driven platform to extract and process financial transactions from bank statements (PDF/image) using serverless architecture.",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0Mva2cXPYfL1ZMVTQrhqoJLwX35OQixJGDA&s?height=300&width=500", // You'll want to replace this with a relevant image
+    tags: ["NestJS", "AWS Lambda", "PostgreSQL RDS", "EventBridge", "S3", "AWS SDK", "Cognito", "Google Authentication", "AI"],
+    category: "fintech", // Or 'ai' or 'saas'
+    github: "#", // Add actual GitHub link if available
+    demo: "https://www.geeks5g.com", // Add actual demo link if available
+    companyName: "Geeks5G",
+    companyUrl: "https://www.geeks5g.com/",
   },
 ]
 
@@ -134,24 +146,31 @@ export function FeaturedProjects() {
                       alt={project.title}
                       className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                     />
-                    {/* <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                      <Button size="sm" variant="secondary" asChild>
-                        <a href={project.github} target="_blank" rel="noopener noreferrer">
-                          <Github className="h-4 w-4 mr-2" />
-                          Code
-                        </a>
-                      </Button>
+                    {/* The old demo/github buttons (commented out in your original code) */}
+                     <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
+                      
                       <Button size="sm" asChild>
                         <a href={project.demo} target="_blank" rel="noopener noreferrer">
                           <ExternalLink className="h-4 w-4 mr-2" />
                           Demo
                         </a>
                       </Button>
-                    </div> */}
+                    </div>
                   </div>
                   <CardHeader>
                     <CardTitle className="text-lg">{project.title}</CardTitle>
                     <CardDescription>{project.description}</CardDescription>
+                    {/* New Company Link Component */}
+                    {project.companyName && project.companyUrl && (
+                      <div className="mt-2">
+                        <a href={project.companyUrl} target="_blank" rel="noopener noreferrer">
+                          <Badge variant="outline" className="cursor-pointer hover:bg-muted-foreground/10 transition-colors">
+                            {project.companyName}
+                            <ExternalLink className="ml-2 h-3 w-3" />
+                          </Badge>
+                        </a>
+                      </div>
+                    )}
                   </CardHeader>
                   <CardContent>
                     <div className="flex flex-wrap gap-2">
