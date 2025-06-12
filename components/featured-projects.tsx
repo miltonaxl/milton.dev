@@ -15,7 +15,7 @@ const projects = [
     description: "All-in-One eCommerce platform for Latin America, offering personalized shopping experiences. Migrated from monolithic to serverless architecture.",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBMpqFRu6HLihOM8Z-BnorzIr-gUI6qtWYzw&s?height=300&width=500", // You'll want to replace this with a relevant image
     tags: ["NestJS", "AWS Lambda", "MongoDB", "Serverless", "CloudFormation", "S3", "API Gateway", "EventBridge", "SQS"],
-    category: "ecommerce",
+    categories:[ "ecommerce", "saas"], // Or 'saas' depending on the business model
     github: "#", // Add actual GitHub link if available
     demo: "https://www.estori.co/",
     companyName: "Pluriza",
@@ -27,7 +27,7 @@ const projects = [
     description: "Platform to aggregate and normalize financial and real estate user data from various bank APIs (Plaid, Finicity) using an ETL-like process.",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcToRP8XuAhkRQvxNKII-z12JqnXCVaNoJulag&s?height=300&width=500", // You'll want to replace this with a relevant image
     tags: ["NestJS", "DynamoDB", "Serverless Framework", "AWS Lambda", "EventBridge", "CloudFormation", "API Gateway", "Grafana", "S3", "Step Functions", "SQS", "SNS"],
-    category: "fintech",
+    categories: ["fintech", "saas"], // Or 'saas' depending on the business model
     github: "#", // Add actual GitHub link if available
     demo: "https://monstro.com/", // Assuming this is the correct URL
     companyName: "Leanware",
@@ -39,7 +39,7 @@ const projects = [
     description: "Full-stack web application for Canadian Orthodontic Partners, providing support services to independent practitioners to optimize patient care.",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS86Ih4bD1SJ0jsKFIyvJLKXBq2NjLqKYygAA&s?height=300&width=500", // You'll want to replace this with a relevant image
     tags: ["Node.js", "Express.js", "React", "MySQL", "GCP", "Full-stack"],
-    category: "healthcare", // Or 'saas' depending on the business model
+    categories: ["healthcare", "sass"], // Or 'saas' depending on the business model
     github: "#", // Add actual GitHub link if available
     demo: "https://www.canadianorthodonticpartners.com/", // Assuming this is the correct URL
     companyName: "Leanware",
@@ -50,8 +50,8 @@ const projects = [
     title: "Leanware - Plannerd.com Wedding Planning Platform",
     description: "Collaborative wedding planning platform for couples and their support teams, featuring robust backend and responsive frontend.",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEeiZNhvOiE2tvTlKMvJ-cOXeozYMtx0qVWA&s?height=300&width=500", // You'll want to replace this with a relevant image
-    tags: ["Django", "Python", "PostgreSQL", "React", "AWS Lambda", "Cognito", "EventBridge", "SNS"],
-    category: "saas",
+    tags: ["Django", "Python", "PostgreSQL", "React", "AWS Lambda", "Cognito", "EventBridge", "SNS", "AI", "LangChain", "OpenAI"],
+    categories: ["saas", "ai", "devops"], // Or 'ai' or 'saas' depending on the business model
     github: "#", // Add actual GitHub link if available
     demo: "https://www.plannerd.com/", // Assuming this is the correct URL
     companyName: "Leanware",
@@ -63,7 +63,7 @@ const projects = [
     description: "All-in-one core and digital banking platform for credit unions, providing mission-critical systems and administrative tools.",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuWATWVqINt9ibM8-m6jgjLfUuL47GPhVptw&s?height=300&width=500", // You'll want to replace this with a relevant image
     tags: ["Node.js", "Express.js", "Sequelize", "PostgreSQL", "AWS CloudWatch"],
-    category: "fintech", // Or 'saas'
+    categories: ["fintech", "sass"], // Or 'saas'
     github: "#", // Add actual GitHub link if available
     demo: "https://www.blossom.net/",
     companyName: "Blossom",
@@ -74,8 +74,8 @@ const projects = [
     title: "Geeks5G - CPA Bookkeeping AI-Powered Transaction Processing",
     description: "AI-driven platform to extract and process financial transactions from bank statements (PDF/image) using serverless architecture.",
     image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0Mva2cXPYfL1ZMVTQrhqoJLwX35OQixJGDA&s?height=300&width=500", // You'll want to replace this with a relevant image
-    tags: ["NestJS", "AWS Lambda", "PostgreSQL RDS", "EventBridge", "S3", "AWS SDK", "Cognito", "Google Authentication", "AI"],
-    category: "fintech", // Or 'ai' or 'saas'
+    tags: ["NestJS", "AWS Lambda", "PostgreSQL RDS", "EventBridge", "S3", "AWS SDK", "Cognito", "Google Authentication", "AI", "LangChain", "OpenAI"],
+    categories: ["fintech", "ai", "devops"], // Or 'ai' or 'saas'
     github: "#", // Add actual GitHub link if available
     demo: "https://www.geeks5g.com", // Add actual demo link if available
     companyName: "Geeks5G",
@@ -90,7 +90,7 @@ export function FeaturedProjects() {
   const filters = ["all", "fintech", "saas", "ai", "devops"]
 
   const filteredProjects =
-    activeFilter === "all" ? projects : projects.filter((project) => project.category === activeFilter)
+    activeFilter === "all" ? projects : projects.filter((project) => project.categories.includes(activeFilter))
 
   return (
     <section id="projects" className="py-20">
