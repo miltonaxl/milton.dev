@@ -28,7 +28,10 @@ export default async function LocaleLayout({
     <NextIntlClientProvider locale={locale} messages={messages}>
       <div className="min-h-screen bg-background">
         <Navigation />
-        <main>{children}</main>
+        {/* sadsad margin on top  */}
+        <div className=" sm:py-8 lg:py-10 pt-16">
+          <main>{children}</main>
+        </div>
         <Footer />
       </div>
     </NextIntlClientProvider>
